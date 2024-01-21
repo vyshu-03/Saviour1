@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Attempt succesful!!!!</h1>
+    <div id="uname">
+    </div>
+    <script>
+        async function fetchItem() {
+            const reqname = document.getElementById('name').value;
+            console.log(reqname)
+      const response = await fetch('/successsss/${reqname}');
+      const data = await response.json();
+      const disp = document.getElementById('uname')
+      disp.innerHTML = '<h1> Hellooo ${data.name} </h1> <h2> Welcome </h2>'
+    }
+    fetchItem()
+    </script>
+</body>
+</html>
